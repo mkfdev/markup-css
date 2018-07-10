@@ -1,0 +1,68 @@
+@import '../../../global/scss_globalvars/globalvars';
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p,ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul,li,ol {
+	list-style: none;
+}
+
+.nv-main {
+	&__bg {
+		background-color: $white;
+	}
+	&__inner {
+		border-top: 1px solid #f1f3f6;
+		border-bottom: 1px solid #d1d8e4;
+	}
+	&__topbar {
+		position: absolute;
+		top: 16px;
+		right: 0;
+		.s-intro-link {
+			float: left;
+			height: 21px;
+			margin-right: 11px;
+			font-size: 11px;
+			color: $color1;
+			letter-spacing: -1px;
+			text-decoration: none;
+			&:after {
+				display: block;
+				width: 1px;
+				height: 11px;
+				background-color: #ebeef3;
+				content: '';
+			}
+		}
+		ul {
+			float: left;
+			letter-spacing: -10px;
+			li {
+				display: inline-block;
+				letter-spacing: 0;
+			}
+		}
+	}
+	&__header {
+		margin: 0 auto;
+		width: 1080px;
+		height: 170px;
+		&-inner {
+			height: 100%;
+			position: relative;
+		}
+	}
+	&__nav {
+		margin: 0 auto;
+		width: 1080px;
+	}
+}
