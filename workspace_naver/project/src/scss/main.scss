@@ -1,47 +1,62 @@
 @import '../../../global/scss_globalvars/globalvars';
 
-body {
+body,html,h1,h2,h3,h4,h5,h6,p,ul,input {
 	margin: 0;
 	padding: 0;
 	font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6,p,ul {
-	margin: 0;
-	padding: 0;
 }
 
 ul,li,ol {
 	list-style: none;
 }
 
+fieldset, legend {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.blind, legend {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
 .nv-main {
 	&__bg {
 		background-color: $white;
 	}
-	&__inner {
-		border-top: 1px solid #f1f3f6;
-		border-bottom: 1px solid #d1d8e4;
-	}
-	&__topbar {
+	&__top-menu {
 		position: absolute;
-		top: 16px;
-		right: 0;
+		top: 11px;
+		right: -5px;
 		.s-intro-link {
 			float: left;
 			height: 21px;
-			margin-right: 11px;
+			line-height: 22px;
 			font-size: 11px;
-			color: $color1;
+			color: $color2;
 			letter-spacing: -1px;
 			text-decoration: none;
 			&:after {
-				display: block;
-				width: 1px;
-				height: 11px;
-				background-color: #ebeef3;
+				display: inline-block;
+				width: 4px;
+				height: 7px;
+				margin-left: 5px;
+				background: url('../../src/imgs/sp-nv-main-1.png') no-repeat;
+				background-position: -58px -168px;
 				content: '';
 			}
+		}
+		.s-bar {
+			float: left;
+			margin: 5px 4px 0 9px;
+			width: 1px;
+			height: 11px;
+			background-color: $color3;
+			content: '';
 		}
 		ul {
 			float: left;
@@ -49,6 +64,40 @@ ul,li,ol {
 			li {
 				display: inline-block;
 				letter-spacing: 0;
+				a {
+					display: block;
+					padding: 5px;
+				}
+				&.s-top-menu1 {
+					a:after {
+						display: block;				
+						width: 58px;
+						height: 10px;
+						background: url('../../src/imgs/sp-nv-main-1.png') no-repeat;
+						background-position: -57px -127px;
+						content: '';
+					}
+					a:hover, a:focus, a:active {
+						&:after {
+							background-position: -125px -127px;
+						}
+					}
+				}
+				&.s-top-menu2 {
+					a:after {
+						display: block;	
+						width: 34px;
+						height: 11px;
+						background: url('../../src/imgs/sp-nv-main-1.png') no-repeat;
+						background-position: 0 -187px;
+						content: '';
+					}
+					a:hover, a:focus, a:active {
+						&:after {
+							background-position: -44px -187px;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -59,10 +108,250 @@ ul,li,ol {
 		&-inner {
 			height: 100%;
 			position: relative;
+			h1 {
+				position: absolute;
+				top: 50%;
+				left: -2px;
+				margin-top: -24px;
+				.s-main-logo {
+					display: inline-block;
+					width: 202px;
+					height: 57px;
+					background: url('../../src/imgs/sp-nv-main-1.png') no-repeat;
+					background-position: 0 0;
+				}
+			}			
 		}
 	}
-	&__nav {
+	&__sch {
+		position: absolute;
+		top: 50%;
+		left: 219px;
+		margin-top: -18px;
+		&-box {
+			display: inline-block;
+			width: 517px;
+			height: 41px;
+			border: 2px solid $color1;
+			background-color: $white;
+			.input-search {
+				margin: 11px 0 0 9px;
+				width: 405px;
+				height: 23px;
+				border: 0;
+				outline: 0;
+				font-weight: bold;
+				font-size: 18px;
+				line-height: 23px;
+			}
+		}
+		&-autocompleted {
+			position: absolute;
+			top: 50%;
+			right: 47px;
+			margin-top: -20px;
+			padding: 17px 10px 17px 5px;			
+			.s-btn-autocompleted {
+				display: block;
+				width: 9px;
+				height: 4px;
+				background: url('../../src/imgs/sp-nv-main-1.png') no-repeat;
+				background-position: -92px -168px;
+				content: '';
+			}			
+			&.is-active {
+				.s-btn-autocompleted {
+					background-position: -187px -148px;					
+				}
+			}
+		}
+		.s-btn-sch {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			width: 45px;
+			height: 45px;
+			border: 0;
+			background-color: $color1;
+			&:after {
+				display: inline-block;
+				width: 23px;
+				height: 22px;
+				background: url('../../src/imgs/sp-nv-main-1.png') no-repeat;
+				background-position: -179px -67px;
+				content: '';
+			}
+		}
+		&-kbd {
+			position: absolute;
+			top: 50%;
+			right: 72px;
+			margin-top: -20.5px;
+			padding: 15px 5px;			
+			.s-btn-kbd {
+				display: block;
+				width: 19px;
+				height: 11px;
+				background: url('../../src/imgs/sp-nv-main-1.png') no-repeat;
+				background-position: -117px -187px;
+				content: '';
+				&.is-active {
+					background-position: -88px -187px;
+				}
+			}
+
+		}		
+	}
+	&__inner {
+		position: relative;
+		border-top: 1px solid #f1f3f6;
+		border-bottom: 1px solid #d1d8e4;
+		background: $white;
+	}
+	&__nav {		
+		position: relative;
 		margin: 0 auto;
 		width: 1080px;
+		height: 46px;
+		&-wrap {
+			@include clearfix;
+			height:100%;
+		}
+		&-cate {
+			float: left;
+			height: 100%;
+			letter-spacing: -10px;
+			li {
+				display: inline-block;
+				height: 100%;
+				padding: 0 7px;
+				line-height: 46px;				
+				letter-spacing: 0;
+				&:after {
+					display: inline-block;
+					height: 100%;
+					vertical-align: middle;
+					content: '';
+				}
+				&:first-child {
+					padding-left: 4px;
+				}
+				a {
+					display: inline-block;
+					height: 15px;
+					vertical-align: middle;
+					background: url('../../src/imgs/sp-nv-main-2.png') no-repeat;
+					&.snv-mail {
+						width: 25px;
+						background-position: -244px -233px;
+					}
+					&.snv-cafe {
+						width: 25px;
+						background-position: -280px -130px;
+					}
+					&.snv-blog {
+						width: 40px;
+						background-position: -150px -182px;
+					}
+					&.snv-kin {
+						width: 39px;
+						background-position: -102px -156px;
+					}
+					&.snv-shop {
+						width: 25px;
+						background-position: -128px -104px;
+					}
+					&.snv-pay {
+						width: 25px;
+						background-position: -107px -286px;
+					}
+					&.snv-tv {
+						width: 32px;
+						background-position: -125px -132px;
+					}
+					&.snv-dic {
+						width: 26px;
+						background-position: 0 -259px;
+					}
+					&.snv-news {
+						width: 28px;
+						background-position: -279px -26px;
+					}
+					&.snv-stock {
+						width: 26px;
+						height: 16px;
+						background-position: -108px -259px;
+					}
+					&.snv-build {
+						width: 40px;
+						height: 16px;
+						background-position: -152px -156px;
+					}
+					&.snv-map {
+						width: 27px;
+						height: 16px;
+						background-position: -279px -208px;
+					}
+					&.snv-mov {
+						width: 27px;
+						height: 16px;
+						background-position: -279px -52px
+					}
+					&.snv-mus {
+						width: 26px;
+						height: 16px;
+						background-position: -144px -259px
+					}
+					&.snv-book {
+						width: 13px;
+						height: 16px;
+						background-position: -140px -78px
+					}
+					&.snv-webtn {
+						width: 27px;
+						height: 16px;
+						background-position: -279px -78px;
+					}
+				}
+			}
+		}
+		&-cate-more {
+			float: left;
+			height: 100%;
+			&:before {
+				display: inline-block;
+				width: 1px;
+				height: 14px;
+				margin-left: 9px;
+				background-color: $color3;
+				vertical-align: middle;
+				content: '';
+			}
+			&:after {
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+				content: '';
+			}	
+			.s-btn-more {
+				display: inline-block;
+				margin: 4px 0 0 9px;
+				width: 55px;
+				height: 16px;
+				vertical-align: middle;
+				background: url('../../src/imgs/sp-nv-main-2.png') no-repeat;
+				background-position: 0 -104px;				
+			}
+		}
+	}
+	&__rank {
+		float: right;
+		&-inner {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 198px;
+			height: 20px;
+		}
 	}
 }

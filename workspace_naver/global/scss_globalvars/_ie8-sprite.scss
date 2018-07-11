@@ -1,0 +1,11 @@
+%ie8-sp {
+    background-image: url('#{$path-proj-img}/sp-nv-main-1.png');
+}
+
+@mixin ie8-nv-sprite($x, $y) {
+    .no-svg & {
+        @extend %ie8-sp;
+        background-position: $x + px $y + px;
+        background-size: auto;
+    }
+}

@@ -12,16 +12,36 @@
 			<div class="nv-main__bg">
 				<section class="nv-main__header">
 					<div class="nv-main__header-inner">
-						<h1><a href="#"><img src="" alt="naver"></a></h1>
+						<h1><a href="#" class="s-main-logo"><span class="blind">네이버</span></a></h1>
 						<div class="nv-main__sch">
-							<input type="text">
-							<button type="button"><span class="blind">검색</span></button>
-						</div>
-						<div class="nv-main__topbar">
+							<form>
+								<fieldset>
+									<legend>검색</legend>
+									<span class="nv-main__sch-box">
+										<input type="text" id="sch-input" class="input-search">
+									</span>
+									<!--/* [D] auto completed active : add is-active class */-->
+									<div class="nv-main__sch-autocompleted">
+										<a href="#" class="s-btn-autocompleted">
+											<span class="blind">자동완성 닫힘</span>
+										</a>
+									</div>
+									<button type="submit" class="s-btn-sch"><span class="blind">검색</span></button>
+								</fieldset>
+							</form>
+							<!--/* [D] keyboard active : add is-active class */-->
+							<div class="nv-main__sch-kbd">
+								<a href="#" class="s-btn-kbd">
+									<span class="blind">한글 입력기 닫힘</span>
+								</a>
+							</div>
+						</div>						
+						<div class="nv-main__top-menu">
 							<a href="#" class="s-intro-link">네이버를 시작페이지로</a>
+							<span class="s-bar"></span>
 							<ul>
-								<li><a href="#"><span class="blind">쥬니어네이버</span></a></li>
-								<li><a href="#"><span class="blind">해피빈</span></a></li>
+								<li class="s-top-menu1"><a href="#"><span class="blind">쥬니어네이버</span></a></li>
+								<li class="s-top-menu2"><a href="#"><span class="blind">해피빈</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -32,34 +52,72 @@
 			<!--/* [S] nv-main__nav */-->
 			<div class="nv-main__inner">
 				<div class="nv-main__nav">
-					<ul class="nv-main__nav-cate">
-						<li><a href="#">메일</a></li>
-						<li><a href="#">카페</a></li>
-						<li><a href="#">블로그</a></li>
-						<li><a href="#">지식인</a></li>
-						<li><a href="#">쇼핑</a></li>
-						<li><a href="#">Pay</a></li>
-						<li><a href="#">Tv</a></li>
-						<li><a href="#">사전</a></li>
-						<li><a href="#">뉴스</a></li>
-						<li><a href="#">증권</a></li>
-						<li><a href="#">부동산</a></li>
-						<li><a href="#">지도</a></li>
-						<li><a href="#">영화</a></li>
-						<li><a href="#">뮤직</a></li>
-						<li><a href="#">책</a></li>
-						<li><a href="#">웹툰</a></li>
-					</ul>
+					<div class="nv-main__nav-wrap">
+						<ul class="nv-main__nav-cate">
+							<li><a href="#" class="snv-mail"><span class="blind">메일</span></a></li>
+							<li><a href="#" class="snv-cafe"><span class="blind">카페</span></a></li>
+							<li><a href="#" class="snv-blog"><span class="blind">블로그</span></a></li>
+							<li><a href="#" class="snv-kin"><span class="blind">지식인</span></a></li>
+							<li><a href="#" class="snv-shop"><span class="blind">쇼핑</span></a></li>
+							<li><a href="#" class="snv-pay"><span class="blind">Pay</span></a></li>
+							<li><a href="#" class="snv-tv"><span class="blind">Tv</span></a></li>
+						</ul>
+						<ul class="nv-main__nav-cate">
+							<li><a href="#" class="snv-dic"><span class="blind">사전</span></a></li>
+							<li><a href="#" class="snv-news"><span class="blind">뉴스</span></a></li>
+							<li><a href="#" class="snv-stock"><span class="blind">증권</span></a></li>
+							<li><a href="#" class="snv-build"><span class="blind">부동산</span></a></li>
+							<li><a href="#" class="snv-map"><span class="blind">지도</span></a></li>
+							<li><a href="#" class="snv-mov"><span class="blind">영화</span></a></li>
+							<li><a href="#" class="snv-mus"><span class="blind">뮤직</span></a></li>
+							<li><a href="#" class="snv-book"><span class="blind">책</span></a></li>
+							<li><a href="#" class="snv-webtn"><span class="blind">웹툰</span></a></li>
+						</ul>
 
-					<div class="nv-main__nav-cate-more">
-						<a href="#">더보기</a>
-						<div class="nv-main__nav-cate-lyr">
-							nav영역
+						<div class="nv-main__nav-cate-more">
+							<a href="#" class="s-btn-more"><span class="blind">더보기</span></a>
+							<div class="nv-main__nav-cate-lyr" style="display: none">
+								nav영역
+							</div>
 						</div>
 					</div>
 
-					<div class="nv-main__rank">
-						<a href="#">검색어</a>
+					<div class="nv-main__rank" aria-hidden="true">
+						<strong class="blind">실시간 급상승 검색어</strong>
+						<div class="nv-main__rank-inner">
+							<ul>
+								<li class="s-rank-item">
+									<a href="#">
+										<em class="s-rank">1</em>
+										<span class="s-search">최지우 나이</span>
+									</a>
+								</li>
+								<li class="s-rank-item">
+									<a href="#"></a>
+										<span class="s-rank">2</span>
+										<span class="s-search">최지우</span>
+									</a>
+								</li>
+								<li class="s-rank-item">
+									<a href="#"></a>
+										<span class="s-rank">2</span>
+										<span class="s-search">최지우</span>
+									</a>
+								</li>
+								<li class="s-rank-item">
+									<a href="#"></a>
+										<span class="s-rank">2</span>
+										<span class="s-search">최지우</span>
+									</a>
+								</li>
+								<li class="s-rank-item">
+									<a href="#"></a>
+										<span class="s-rank">2</span>
+										<span class="s-search">최지우</span>
+									</a>
+								</li>
+							</ul>						
+						</div>
 					</div>
 				</div>
 			</div>
